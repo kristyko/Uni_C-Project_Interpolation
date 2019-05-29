@@ -16,16 +16,16 @@ typedef struct DMatrix
 {
     DVector ** column;
     UTYPE size;
-} DMatrix;
+}DMatrix;
 
 DMatrix* createDMatrix(UTYPE size);
-double getDMatrix(DMatrix* matrix, UTYPE n, UTYPE m);
-void setDMatrixEl(DMatrix* matrix, UTYPE n, UTYPE m, DTYPE x);
-void setDMatrix(DMatrix* matrix);
-void clearDMatrix(DMatrix* matrix);
-void freeDMatrix(DMatrix** matrix);
-DMatrix* cutMatrix(DMatrix* matrix, ITYPE i1, ITYPE i2);
-double det(DMatrix* matrix);
-void printDMatrix(DMatrix* matrix);
+DTYPE getDMatrix( DMatrix* matrix, UTYPE n, UTYPE m);
+void setDMatrixEl( DMatrix* matrix, UTYPE n, UTYPE m, DTYPE x);
+void setDMatrix( DMatrix* matrix);
+void clearDMatrix( DMatrix* matrix);
+void freeDMatrix( DMatrix** matrix);
+DMatrix* cutMatrix( DMatrix* matrix, ITYPE i1, ITYPE i2);
+DTYPE det( DMatrix* matrix);
+void printDMatrix( DMatrix* matrix);
 
 #endif /* DMatrix_h */

@@ -20,7 +20,8 @@
 typedef double DTYPE;
 typedef int ITYPE;
 typedef size_t UTYPE;
+typedef char CHARACTER;
 
-#define MIN_LEN 4
+#define MIN_LEN 100
 
 #endif /* common_h */

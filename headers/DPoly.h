@@ -16,17 +16,17 @@ typedef struct DPoly
 {
     DTYPE *coeff;
     UTYPE size;
-} DPoly;
+}DPoly;
 
 DPoly* createDPoly(UTYPE size);
-double getDPoly(DPoly* poly, UTYPE index);
-void setDPolyEl(DPoly* poly, UTYPE index, DTYPE value);
-void setDPoly(DPoly* poly);
-void clearDPoly(DPoly* poly);
-void freeDPoly(DPoly **poly);
-void resizeDPoly(DPoly* poly, UTYPE newSize);
-void printDPoly(DPoly* poly);
-double valuePolyEl(DPoly* poly, DTYPE x);
-DVector* valuePoly(DPoly* poly, DVector* x);
+DTYPE getDPoly( DPoly* poly, UTYPE index);
+void setDPolyEl( DPoly* poly, UTYPE index, DTYPE value);
+void setDPoly( DPoly* poly);
+void clearDPoly( DPoly* poly);
+void freeDPoly( DPoly **poly);
+void resizeDPoly( DPoly* poly, UTYPE newSize);
+void printDPoly( DPoly* poly);
+DTYPE valuePolyEl( DPoly* poly, DTYPE x);
+DVector* valuePoly( DPoly* poly, DVector* x);
 
 #endif /* DPoly_h */
