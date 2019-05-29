@@ -72,7 +72,7 @@ void freeDMatrix(DMatrix** matrix)
 DMatrix* cutMatrix(DMatrix* matrix, ITYPE i1, ITYPE i2)
 {
     DMatrix* minor_i = createDMatrix(matrix->size - 1);
-    int x = 0;
+    ITYPE x = 0;
     for ( UTYPE j=0; j < matrix->size; ++j )
     {
         if ( j != i1 )
@@ -89,7 +89,7 @@ DMatrix* cutMatrix(DMatrix* matrix, ITYPE i1, ITYPE i2)
 }
 
 // определитель матрицы максимального размера 4
-double det(DMatrix* matrix)
+DTYPE det(DMatrix* matrix)
 {
     if ( matrix->size == 1 )
     {
@@ -111,7 +111,7 @@ double det(DMatrix* matrix)
     }
     else if ( matrix->size == 4)
     {
-        double result = 0;
+        DTYPE result = 0;
         for ( int i=0; i < 4; ++i)
         {
             result += pow(-1, i) * matrix->column[0]->data[i] * det(cutMatrix(matrix, 0, i));

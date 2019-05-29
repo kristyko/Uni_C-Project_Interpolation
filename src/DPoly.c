@@ -23,7 +23,7 @@ DPoly* createDPoly(UTYPE size)
 }
 
 // взятие коэффициента многочлена
-double getDPoly(DPoly* poly, UTYPE index)
+DTYPE getDPoly(DPoly* poly, UTYPE index)
 {
     if (index < poly->size) { return poly->coeff[index]; }
     else { exit(INDEX_OUT_OF_BOUNDS_EXCEPTION); }
@@ -41,7 +41,7 @@ void setDPoly(DPoly* poly)
 {
     for (UTYPE i=0; i < poly->size; ++i)
     {
-        double x;
+        DTYPE x;
         scanf("%lf", &x);
         setDPolyEl(poly, i, x);
     }
@@ -82,9 +82,9 @@ void printDPoly(DPoly* poly)
 }
 
 // значение многочлена в точке
-double valuePolyEl(DPoly* poly, DTYPE x)
+DTYPE valuePolyEl(DPoly* poly, DTYPE x)
 {
-    double res = 0;
+    DTYPE res = 0;
     for (int i=0; i < poly->size; ++i)
     {
         res = res * x + poly->coeff[i];
